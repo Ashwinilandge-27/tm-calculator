@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.header {
+    background: #1f2937;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header p {
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+.start-btn {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    background: #1d4ed8;
+}
+
+.tape {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.tape-cell {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tape-cell.active {
+    background: #facc15;
+    border-color: #111;
+}
+
+.head-label {
+    text-align: center;
+    font-size: 25px;
+}
+
+.tape-info {
+    text-align: center;
+    color: #666;
+}
+
+.id-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.id-grid div {
+    background: #f3f4f6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.id-grid strong,
+.id-grid span {
+    display: block;
+}
+
+.id-grid span {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.description {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #374151;
+    color: white;
+}
+
+.controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #f3f4f6;
+}
+
+.selected-row {
+    background: #fef3c7;
+}
+
+.result-card {
+    background: #dcfce7;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.unary-result {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.accepted {
+    color: #166534;
+    font-weight: bold;
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .id-grid {
+        grid-template-columns: 1fr;
+    }
+}
